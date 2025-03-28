@@ -1,0 +1,101 @@
+@font-face {
+    font-family: alfredsans;
+    src: url(/misc/AlfredSans.otf);
+  }
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    padding: 15px;
+    display: grid;
+    grid-template-areas: 
+    'header header nav nav nav'
+    'imgtitle imgtitle imgtitle imgslider imgslider';
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        'header header header header header'
+        'nav nav nav nav nav'
+        'imgtitle imgtitle imgtitle imgslider imgslider';
+        gap: 10px;
+    }
+}
+
+.herosection {
+    background-image: url(/img/r-architecture-rOk4VSMS3Ck-unsplash.jpg);
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header {
+    grid-area: header;
+    
+}
+
+h1 {
+    text-decoration-line:underline;
+    text-decoration-color: #72a5d1bc;
+    font-family:alfredsans;
+    font-size:34px;
+    font-weight:500;
+    text-shadow: 0.5px 0px 0px rgb(136, 130, 130);
+    color: #aaafcf;
+    mix-blend-mode:difference;
+}
+
+.flexnavbar {
+    grid-area: nav;
+    display: flex;
+    gap: 7vw;
+    margin-top: 10px;
+}
+
+.navlink {
+    text-decoration-line: none;
+    text-decoration-color: #72a5d19a;
+    font-family:alfredsans;
+    font-size:21px;
+    font-weight:500;
+    text-shadow: 0px 0px 0px rgb(103, 103, 103);
+    color: #aaafcf;
+    mix-blend-mode:difference;
+}
+
+.navlink:hover {
+    filter:saturate(600%)
+}
+
+.navlink:active {
+    filter:saturate(600%)
+}
+
+.imgslider {
+    grid-area: imgslider;
+}
+
+/*.slideButton {
+    border-style: none;
+    padding-left: 50px;
+    padding-top: 2px;
+    
+    margin: 1px;
+}
+*/
+
+.slideButton {
+    background-color: rgba(139, 139, 139, 0.856);
+    border-style:none;
+    width: 50px;
+    height: 3px;
+    margin: 2px;
+}
