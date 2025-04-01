@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-.grid-container {
+.herogrid-container {
     padding: 15px;
     display: grid;
     grid-template-areas: 
@@ -17,24 +17,24 @@
     gap: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .grid-container {
-        display: grid;
-        grid-template-areas: 
-        'header header header header header'
-        'nav nav nav nav nav'
-        'imgtitle imgtitle imgtitle imgslider imgslider';
-        gap: 10px;
-    }
-}
-
 .herosection {
+    grid-area: herosection;
     background-image: url(/img/r-architecture-rOk4VSMS3Ck-unsplash.jpg);
-    height: 700px;
+    height: 650px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+#pagegrid {
+    display: grid;
+    grid-template-areas:
+    'herosection herosection herosection herosection herosection'
+    'slogan slogan intro intro intro'
+    'philosophy philosophy sideimg sideimg sideimg'
+    'footersection footersection footerlogo footerimg footerimg';
+    gap: 60px;
 }
 
 header {
@@ -43,11 +43,40 @@ header {
 }
 
 h1 {
+    font-family:alfredsans;
+    font-size:40px;
+    font-weight:500;
+}
+
+h2 {
+    font-family:alfredsans;
+    font-size:25px;
+    font-weight:500;
+}
+
+p {
+    font-family:alfredsans;
+    font-size:16px;
+    font-weight:500;
+}
+
+#intro {
+    grid-area: intro;
+    margin-right: 50px
+}
+
+#philosophy {
+    grid-area: philosophy;
+    margin-left: 50px;
+}
+
+#philosophy h2 {
+    margin-bottom: 10px;
+} 
+
+#logo {
     text-decoration-line:underline;
     text-decoration-color: #72a5d1bc;
-    font-family:alfredsans;
-    font-size:34px;
-    font-weight:500;
     text-shadow: 0.5px 0px 0px rgb(136, 130, 130);
     color: #aaafcf;
     mix-blend-mode:difference;
@@ -64,7 +93,7 @@ h1 {
     text-decoration-line: none;
     text-decoration-color: #72a5d19a;
     font-family:alfredsans;
-    font-size:21px;
+    font-size:25px;
     font-weight:500;
     text-shadow: 0px 0px 0px rgb(103, 103, 103);
     color: #aaafcf;
@@ -81,6 +110,14 @@ h1 {
 
 .imgslider {
     grid-area: imgslider;
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.057);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: -5px -2px 5px rgba(0, 0, 0, 0.203) inset;
+    min-height: 30px;
 }
 
 /*.slideButton {
@@ -92,10 +129,79 @@ h1 {
 }
 */
 
-.slideButton {
+/*.slideButton {
     background-color: rgba(139, 139, 139, 0.856);
     border-style:none;
     width: 50px;
-    height: 3px;
+    height: 4px;
     margin: 2px;
+    font-size: 43px;
+}
+
+*/
+
+.slideButton {
+    background-color: rgba(139, 139, 139, 0);
+    border-style:none;
+    width: 62px;
+    margin: 0px;
+    font-size: 25px;
+    color: rgba(139, 139, 139, 0);
+    text-shadow: 0.3px 0px rgba(139, 139, 139, 0.856), 0.1px 0px rgba(139, 139, 139, 0.856);
+}
+
+/* #firstButton {
+    color: rgba(255, 255, 255, 0.856);
+}
+*/
+
+#slogan {
+    margin-left: 50px;
+    margin-right: 10px;
+    grid-area: slogan;
+}
+
+#footerlogo {
+    grid-area: footerlogo;
+}
+
+@media only screen and (max-width: 600px) {
+    .herogrid-container {
+        display: grid;
+        grid-template-areas: 
+        'header header header header header'
+        'nav nav nav nav nav'
+        'imgtitle imgtitle imgtitle imgslider imgslider'
+        'slogan slogan slogan slogan slogan';
+        gap: 10px;
+    }
+    .herosection {
+        height: 600px;
+    }
+    .imgslider {
+        right: -11px;
+        position: relative;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    #pagegrid {
+        display:grid;
+        grid-template-areas:
+        'herosection herosection herosection herosection herosection'
+        'slogan slogan slogan slogan slogan'
+        'intro intro intro intro intro';
+        gap: 30px;
+    }
+    #slogan {
+        margin-left: 5px;
+        margin-right: 0px
+    }
+    #intro {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #philosophy {
+        margin-left: 5px;
+    }
 }
