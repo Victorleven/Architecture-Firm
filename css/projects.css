@@ -1,0 +1,295 @@
+@font-face {
+    font-family: alfredsans;
+    src: url(/misc/AlfredSans.otf);
+  }
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.herogrid-container {
+    padding: 15px;
+    display: grid;
+    grid-template-areas: 
+    'header header nav nav nav'
+    'imgtitle imgtitle imgtitle imgslider imgslider';
+    gap: 10px;
+}
+
+.herosection {
+    grid-area: herosection;
+    background-image: url(/img/vidar-nordli-mathisen-q-fr4QsIyic-unsplash.jpg);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#pagegrid {
+    display: grid;
+    grid-template-areas:
+    'herosection herosection herosection herosection herosection'
+    'slogan slogan intro intro intro'
+    'philosophy philosophy sideimg sideimg sideimg'
+    'footer footer footer footer footer';
+    gap: 60px;
+}
+
+header {
+    grid-area: header;
+    
+}
+
+h1 {
+    font-family:alfredsans;
+    font-size:40px;
+    font-weight:500;
+}
+
+h2 {
+    font-family:alfredsans;
+    font-size:25px;
+    font-weight:500;
+}
+
+p {
+    font-family:alfredsans;
+    font-size:16px;
+    font-weight:500;
+}
+
+#intro {
+    grid-area: intro;
+    margin-right: 50px
+}
+
+#philosophy {
+    grid-area: philosophy;
+    margin-left: 50px;
+}
+
+#philosophy h2 {
+    margin-bottom: 10px;
+} 
+
+#logo {
+    text-decoration-line:none;
+    text-decoration-color: #bc93e38d;
+    text-shadow: 0.5px 0px 0px rgb(76, 84, 9);
+    color: #54e400f7;
+    mix-blend-mode:difference;
+}
+
+.flexnavbar {
+    grid-area: nav;
+    display: flex;
+    gap: 7vw;
+    margin-top: 10px;
+}
+
+#projectlink{
+    text-decoration: underline;
+}
+
+.navlink {
+    text-decoration-line: none;
+    text-decoration-color: #b793e3f9;
+    font-family:alfredsans;
+    font-size:25px;
+    font-weight:500;
+    text-shadow: 0px 0px 0px rgba(76, 84, 9, 0.276);
+    color: #54e400f7;
+    mix-blend-mode:difference;
+}
+
+.navlink:hover {
+    filter:saturate(600%)
+}
+
+.navlink:active {
+    filter:saturate(600%)
+}
+
+.imgslider {
+    grid-area: imgslider;
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.057);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: -5px -2px 5px rgba(0, 0, 0, 0.203) inset;
+    min-height: 30px;
+}
+
+/*.slideButton {
+    border-style: none;
+    padding-left: 50px;
+    padding-top: 2px;
+    
+    margin: 1px;
+}
+*/
+
+/*.slideButton {
+    background-color: rgba(139, 139, 139, 0.856);
+    border-style:none;
+    width: 50px;
+    height: 4px;
+    margin: 2px;
+    font-size: 43px;
+}
+
+*/
+
+.slideButton {
+    background-color: rgba(139, 139, 139, 0);
+    border-style:none;
+    width: 62px;
+    margin: 0px;
+    font-size: 25px;
+    color: rgba(139, 139, 139, 0);
+    text-shadow: 0.3px 0px rgba(139, 139, 139, 0.856), 0.1px 0px rgba(139, 139, 139, 0.856);
+}
+
+/* #firstButton {
+    color: rgba(255, 255, 255, 0.856);
+}
+*/
+
+#slogan {
+    margin-left: 50px;
+    margin-right: 10px;
+    grid-area: slogan;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: 
+    'footerlinks footersection footersection footerlogo';
+    grid-template-columns: 15vw 15vw 15vw 30vw;
+    height: 200px;
+    background-color: rgb(233, 233, 233);
+}
+
+#flexfooter {
+    border-left: 1.5px solid gray;
+    grid-area: footerlinks;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 50px;
+}
+
+.footerlink {
+    font-family: alfredsans;
+    margin: 12px;
+    margin-left: 50px;
+    font-size: 16px;
+    color:black;
+    text-underline-offset: 2px;
+}
+
+.footerlink:hover {
+    text-underline-offset: 1px;
+    color: rgb(0, 38, 255);
+    text-decoration-color: rgb(0, 38, 255);
+}
+
+#footerlogo {
+    margin-top: 29px;
+    grid-area: footerlogo;
+}
+
+#footerlogo h1 {
+    width: 200px;
+}
+
+#footerlogo p {
+    position: relative;
+    bottom: 25px;
+    left: 170px;
+}
+
+@media only screen and (max-width: 600px) {
+    html,body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .herogrid-container {
+        display: grid;
+        grid-template-areas: 
+        'header header header header header'
+        'nav nav nav nav nav'
+        'imgtitle imgtitle imgtitle imgslider imgslider'
+        'slogan slogan slogan slogan slogan';
+        gap: 10px;
+    }
+    #logo {
+        margin-right: 40px;
+    }
+
+    .herosection {
+        height: 315px;
+        width: 100vw;
+    }
+    .imgslider {
+        right: 37px;
+        position: relative;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    #pagegrid {
+        display: grid;
+        grid-template-areas:
+        'herosection herosection herosection herosection herosection'
+        'slogan slogan slogan slogan slogan'
+        'intro intro intro intro intro'
+        'philosophy philosophy philosophy philosophy philosophy'
+        'footer footer footer footer footer';
+        gap: 30px;
+    }
+    #slogan {
+        margin-left: 5px;
+        margin-right: 0px
+    }
+    #intro {
+        margin-left: 10px;
+        width: 95vw;
+    }
+    #philosophy {
+        margin-left: 5px;
+        width: 95vw;
+    }
+    footer {
+        grid-template-columns: 12vw 12vw 12vw 30vw;
+        margin-bottom: -100px;
+        width: 100vw;
+    }
+    
+    #flexfooter {
+        border: none;
+        grid-area: footerlinks;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 28px;
+        margin-left: 15px;
+    }
+    .footerlink {
+        margin-left: 12px;
+    }
+    #footerlogo {
+        margin-top: 5px;
+    }
+    #footerlogo p {
+        bottom: 0px;
+        left: 0px;
+    }
+}
