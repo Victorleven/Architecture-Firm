@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 .herogrid-container {
     padding: 15px;
     display: grid;
@@ -34,7 +40,7 @@
     'slogan slogan intro intro intro'
     'philosophy philosophy sideimg sideimg sideimg'
     'footer footer footer footer footer';
-    gap: 60px;
+    gap: 90px;
 }
 
 header {
@@ -56,7 +62,7 @@ h2 {
 
 p {
     font-family:alfredsans;
-    font-size:16px;
+    font-size:15px;
     font-weight:500;
 }
 
@@ -167,7 +173,7 @@ footer {
     grid-template-areas: 
     'footerlinks footersection footersection footerlogo';
     grid-template-columns: 15vw 15vw 15vw 30vw;
-    height: 200px;
+    height: 205px;
     background-color: rgb(233, 233, 233);
 }
 
@@ -266,6 +272,7 @@ footer {
         grid-template-columns: 12vw 12vw 12vw 30vw;
         margin-bottom: -100px;
         width: 100vw;
+        height: 220px;
     }
     
     #flexfooter {
@@ -281,10 +288,11 @@ footer {
         margin-left: 12px;
     }
     #footerlogo {
-        margin-top: 5px;
+        margin-top: 10px;
     }
     #footerlogo p {
         bottom: 0px;
         left: 0px;
+        width: 120%;
     }
 }

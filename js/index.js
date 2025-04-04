@@ -12,7 +12,7 @@ function imageSlide(slideNumber) {
         document.getElementById("heroimg").style.backgroundImage = "url(/img/r-architecture-rOk4VSMS3Ck-unsplash.jpg)"
     } 
     if (slideNumber == 2) {
-        document.getElementById("heroimg").style.backgroundImage = "url(/img/vidar-nordli-mathisen-q-fr4QsIyic-unsplash.jpg)"
+        document.getElementById("heroimg").style.backgroundImage = "url(/img/r-architecture-wJAOeXvxudM-unsplash.jpg)"
         //heroImg.style.backgroundImage = "url(/img/r-architecture-2gDwlIim3Uw-unsplash.jpg)"
     }
     if (slideNumber == 3) {
