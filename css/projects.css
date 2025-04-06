@@ -79,15 +79,6 @@ p {
     margin-right: 50px
 }
 
-#philosophy {
-    grid-area: philosophy;
-    margin-left: 50px;
-}
-
-#philosophy h2 {
-    margin-bottom: 10px;
-} 
-
 #logo {
     text-decoration-line:none;
     text-decoration-color: #bc93e38d;
@@ -202,8 +193,8 @@ p {
 }
 
 .textsection {
-
-}
+    margin-left: 10px;
+}  
 
 .textsection h2 {
     font-weight: 600;
@@ -310,6 +301,10 @@ footer {
         'intro intro intro intro intro'
         'img1 img1 img1 img1 img1'
         'section1 section1 section1 section1 section1'
+        'img2 img2 img2 img2 img2'
+        'section2 section2 section2 section2 section2'
+        'img3 img3 img3 img3 img3'
+        'section3 section3 section3 section3 section3'
         'footer footer footer footer footer';
         gap: 30px;
     }
@@ -324,9 +319,13 @@ footer {
         margin-left: 10px;
         width: 95vw;
     }
-    #philosophy {
-        margin-left: 5px;
-        width: 95vw;
+    #img1section, #img2section, #img3section {
+        margin-left: 0px;
+    }
+    #section1, #section2, #section3 {
+        margin-top: -20px;
+        margin-left: 10px;
+        margin-right: 40px;
     }
     footer {
         grid-template-columns: 12vw 12vw 12vw 30vw;

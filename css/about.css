@@ -1,0 +1,290 @@
+@font-face {
+    font-family: alfredsans;
+    src: url(/misc/AlfredSans.otf);
+  }
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.herogrid-container {
+    padding: 15px;
+    display: grid;
+    grid-template-areas: 
+    'header header nav nav nav'
+    'imgtitle imgtitle imgtitle imgslider imgslider';
+    gap: 10px;
+}
+
+.herosection {
+    grid-area: herosection;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100cqw;
+    margin-bottom: 30px;
+}
+
+#pagegrid {
+    display: grid;
+    grid-template-areas:
+    'herosection herosection herosection herosection herosection'
+    'ceo ceo intro intro intro'
+    'philosophy philosophy sideimg sideimg sideimg'
+    'footer footer footer footer footer';
+    gap: 20px;
+}
+
+header {
+    grid-area: header;
+    
+}
+
+h1 {
+    font-family:alfredsans;
+    font-size:40px;
+    font-weight:500;
+}
+
+h2 {
+    font-family:alfredsans;
+    font-size:25px;
+    font-weight:500;
+}
+
+p {
+    font-family:alfredsans;
+    font-size:16px;
+    font-weight:500;
+    line-height: 180%;
+}
+
+#ceo {
+    grid-area: ceo;
+    width: 55%;
+    margin-top: 30px;
+    margin-left: 5vw;
+}
+
+#intro {
+    grid-area: intro;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+#intro h2 {
+    margin-top: 20px;
+}
+
+#intro p {
+    margin-top: 30px;
+}
+
+#philosophy {
+    grid-area: philosophy;
+    margin-left: 50px;
+
+}
+
+#philosophy h2 {
+    margin-bottom: 10px;
+} 
+
+#logo {
+    
+}
+
+.flexnavbar {
+    grid-area: nav;
+    display: flex;
+    gap: 7vw;
+    margin-top: 10px;
+}
+
+#aboutlink{
+    text-decoration: underline;
+}
+
+.navlink {
+    color: black;
+    text-decoration-line: none;
+    font-family: alfredsans;
+    font-size:25px;
+    font-weight:500;
+}
+
+.navlink:hover {
+    filter:invert(20%)
+}
+
+.navlink:active {
+    filter:invert(20%)
+}
+
+/*.slideButton {
+    border-style: none;
+    padding-left: 50px;
+    padding-top: 2px;
+    
+    margin: 1px;
+}
+*/
+
+/*.slideButton {
+    background-color: rgba(139, 139, 139, 0.856);
+    border-style:none;
+    width: 50px;
+    height: 4px;
+    margin: 2px;
+    font-size: 43px;
+}
+
+*/
+
+
+
+/* #firstButton {
+    color: rgba(255, 255, 255, 0.856);
+}
+*/
+
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: 
+    'footerlinks footersection footersection footerlogo';
+    grid-template-columns: 15vw 15vw 15vw 30vw;
+    height: 205px;
+    background-color: rgb(233, 233, 233);
+}
+
+#flexfooter {
+    border-left: 1.5px solid gray;
+    grid-area: footerlinks;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 50px;
+}
+
+.footerlink {
+    font-family: alfredsans;
+    margin: 12px;
+    margin-left: 50px;
+    font-size: 16px;
+    color:black;
+    text-underline-offset: 2px;
+}
+
+.footerlink:hover {
+    text-underline-offset: 1px;
+    color: rgb(0, 38, 255);
+    text-decoration-color: rgb(0, 38, 255);
+}
+
+#footerlogo {
+    margin-top: 29px;
+    grid-area: footerlogo;
+}
+
+#footerlogo h1 {
+    width: 200px;
+}
+
+#footerlogo p {
+    position: relative;
+    bottom: 25px;
+    left: 170px;
+}
+
+@media only screen and (max-width: 600px) {
+    html,body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .herogrid-container {
+        display: grid;
+        grid-template-areas: 
+        'header header header header header'
+        'nav nav nav nav nav'
+        'imgtitle imgtitle imgtitle imgslider imgslider'
+        'slogan slogan slogan slogan slogan';
+        gap: 10px;
+    }
+    .herosection {
+        height: 150px;
+        width: 100vw;
+    }
+    #logo {
+        margin-right: 40px;
+    }
+    .imgslider {
+        right: 40px;
+        position: relative;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    #pagegrid {
+        display: grid;
+        grid-template-areas:
+        'herosection herosection herosection herosection herosection'
+        'intro intro intro intro intro'
+        'intro intro intro intro intro'
+        'ceo ceo ceo ceo ceo'
+        'philosophy philosophy philosophy philosophy philosophy'
+        'footer footer footer footer footer';
+        gap: 30px;
+    }
+    #slogan {
+        margin-left: 5px;
+        margin-right: 0px
+    }
+    #intro {
+        margin-left: 10px;
+        width: 95vw;
+    }
+    #philosophy {
+        margin-left: 5px;
+        width: 95vw;
+    }
+    footer {
+        grid-template-columns: 12vw 12vw 12vw 30vw;
+        margin-bottom: -100px;
+        width: 100vw;
+        height: 220px;
+    }
+    
+    #flexfooter {
+        border: none;
+        grid-area: footerlinks;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 28px;
+        margin-left: 15px;
+    }
+    .footerlink {
+        margin-left: 12px;
+    }
+    #footerlogo {
+        margin-top: 10px;
+    }
+    #footerlogo p {
+        bottom: 0px;
+        left: 0px;
+        width: 120%;
+    }
+}
