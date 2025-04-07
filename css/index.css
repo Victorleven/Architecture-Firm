@@ -127,26 +127,6 @@ p {
     min-height: 30px;
 }
 
-/*.slideButton {
-    border-style: none;
-    padding-left: 50px;
-    padding-top: 2px;
-    
-    margin: 1px;
-}
-*/
-
-/*.slideButton {
-    background-color: rgba(139, 139, 139, 0.856);
-    border-style:none;
-    width: 50px;
-    height: 4px;
-    margin: 2px;
-    font-size: 43px;
-}
-
-*/
-
 .slideButton {
     background-color: rgba(139, 139, 139, 0);
     border-style:none;
@@ -156,11 +136,6 @@ p {
     color: rgba(139, 139, 139, 0);
     text-shadow: 0.3px 0px rgba(139, 139, 139, 0.856), 0.1px 0px rgba(139, 139, 139, 0.856);
 }
-
-/* #firstButton {
-    color: rgba(255, 255, 255, 0.856);
-}
-*/
 
 #slogan {
     margin-left: 50px;

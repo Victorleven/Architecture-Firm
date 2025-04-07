@@ -130,34 +130,6 @@ p {
     filter:invert(20%)
 }
 
-/*.slideButton {
-    border-style: none;
-    padding-left: 50px;
-    padding-top: 2px;
-    
-    margin: 1px;
-}
-*/
-
-/*.slideButton {
-    background-color: rgba(139, 139, 139, 0.856);
-    border-style:none;
-    width: 50px;
-    height: 4px;
-    margin: 2px;
-    font-size: 43px;
-}
-
-*/
-
-
-
-/* #firstButton {
-    color: rgba(255, 255, 255, 0.856);
-}
-*/
-
-
 footer {
     grid-area: footer;
     display: grid;
